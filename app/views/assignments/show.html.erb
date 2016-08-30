@@ -1,0 +1,16 @@
+<div id="assignment">
+  <h3>
+    <%= @assignment.date.strftime("%B %d") %>: <%= @assignment.assignment %> (Difficulty: <%= @assignment.difficulty %>)
+  </h3>
+</div>
+<div id="problems">
+  <h2>Problems</h2>
+  <%= render @assignment.problems %>
+  <h3>Add a Problem</h3>
+  <%= render "problems/form" %>
+</div>
+<%= link_to "Back", root_path %>
+|
+<%= link_to "Edit", edit_assignment_path(@assignment) %>
+|
+<%= link_to "Delete", assignment_path(@assignment), method: :delete, data: { confirm: "Are you sure?" } %>

@@ -1,0 +1,11 @@
+<div id="index_assignments">
+  <% @assignments.each do |assignment| %>
+    <h2>
+      <%= link_to assignment.date.strftime("%A %B %d"), assignment %>
+    </h2>
+    <h3>
+      <span>Assignment:</span>
+      <%= assignment.assignment %>
+    </h3>
+  <% end %>
+</div>

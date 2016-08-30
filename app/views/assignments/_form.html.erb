@@ -1,0 +1,7 @@
+<%= simple_form_for(@assignment, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :date, label: "Date" %>
+  <%= f.input :assignment, label: "What assignment did you receive", input_html: { class: "form-control" } %>
+  <%= f.input :difficulty, label: "How difficult was the assignment?", input_html: { class: "form-control" } %>
+  <br/>
+  <%= f.button :submit %>
+<% end %>

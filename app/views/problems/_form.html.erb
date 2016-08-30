@@ -1,0 +1,6 @@
+<%= simple_form_for([@assignment, @assignment.problems.build]) do |f| %>
+  <%= f.input :name, input_html: { class: "form-control" } %>
+  <%= f.input :description, input_html: { class: "form-control" } %>
+  <br/>
+  <%= f.button :submit %>
+<% end %>
